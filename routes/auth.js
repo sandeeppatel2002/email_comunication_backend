@@ -36,7 +36,7 @@ router.get("/logout", (req, res) => {
       return res.status(500).json({ message: "Error logging out" });
     }
     // Additional actions after logout (e.g., redirect)
-    res.redirect("http://localhost:3000/login");
+    res.redirect(`${process.env.CLIENT_URL}/login`);
   });
 });
 
